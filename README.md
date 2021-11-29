@@ -1,131 +1,92 @@
-# Accessible Astro Starter
+# Frontend Mentor - NFT preview card component
 
-This starter project is build upon the (awesome) [Astro Static Site Builder](https://astro.build/). This starter offers a couple of Accessibility components and some utility classes to get you building your project faster. Also check out the [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components) npm package which can be used with (or without) this starter!
+![Design preview for the NFT preview card component coding challenge](./design/desktop-preview.jpg)
 
-[Live demo](https://accessible-astro.markteekman.nl/)
+## Welcome! 👋
 
-## Installation
-```console
-npm init astro -- --template markteekman/accessible-astro-starter
-```
+Thanks for checking out this front-end coding challenge.
 
-## Accessibility features
+[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-In this starter you'll find a couple of things:
+**To do this challenge, you need a basic understanding of HTML and CSS.**
 
-- Accessible landmarks in the `DefaultLayout.astro` file such as `header`, `main` and `footer`
-- Accessible landmark examples in the `index.astro` file such as `section` and `nav`
-- `SkipLinks.astro` component to skip to either the main menu or the main content
-- `Navigation.astro` component with keyboard accessible navigation (arrow keys, escape key)
-- `ResponsiveToggle.astro` component with an accessible responsive toggle button for the navigation
-- `DarkMode.astro` component toggle with accessible button and a user system preferred color scheme
-- Outline focus indicator which works on dark and light backgrounds
-- `.sr-only` token class for screen reader only text content
+## The challenge
 
-## Other features
+Your challenge is to build out this preview card component and get it looking as close to the design as possible.
 
-This starter contains some extra Design System like utility classes to aid in the global layout of your project. All of this can be found in the `public/scss/base` directory, and compiles in the `globals.scss` file. Using these primitives is totally optional, use or remove at your own preference :) What it contains:
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-- Reset file to reset browser defaults and ensure everything looks good
-- Some basic font settings, such as responsive heading sizes
-- Color shades for your color pallet, rendered to the `:root` of your website as custom properties
-- Simple auto-grid setting using `display: grid` and a `data-attribute`
-- A bit more advanced grid settings using `display` grid to easily setup a 12-column layout
-- Utilities set in `_utility.scss` for things such as spacing, sizes, colors, and box-shadows
+Your users should be able to:
 
-### Using Auto Grid
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
 
-Simply apply the `data-auto-grid` attribute on your parent `div` with a number from 2-6 (if you need more columns just tweak the for loop in `_auto-grid.scss`). The grid automatically creates new rows (this is how `display: grid` works by default).
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-```html
-<div class="container" data-auto-grid="3">
-  <p>First column</p>
-  <p>Second column</p>
-  <p>Third column</p>
-</div>
-```
+## Where to find everything
 
-You can also center the contents of the cell using the `data-grid-center` attribute. Use it together with `data-auto-grid`.
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-```html
-<div class="container" data-auto-grid="3" data-grid-center>
-  <!-- ... -->
-</div>
-```
+The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
 
-_Examples are included in the index.astro file_
+If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
 
-### Using Grid
+You will find all the required assets in the `/images` folder. The assets are already optimized.
 
-Grid enables you to build a little more complex layouts if need be. Using `display: flex;` you can define the amount of columns `.cells` should take up in your `.grid`, and for which breakpoint they should do so. You can also use offset on a grid to create an extra column of offset. For all examples check [my documentation website](https://markteekman.nl/project/flexbox-grid).
+There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-```html
-<div class="container">
-  <div class="grid gutters">
-    <div class="cell small-12 medium-3">
-      <h3>Sidebar</h3>
-      <!-- ... -->
-    </div>
-    <div class="cell small-12 medium-8 offset-medium-1">
-      <h3>Main</h3>
-      <!-- ... -->
-    </div>
-  </div>
-</div>
-```
+## Building your project
 
-_Examples are included in the index.astro file_
+Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
-### Using Margin and Padding
+1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
+2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
+3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
+4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
+5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
+6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-To prevent spacing each element in your website individually and to prevent inconsistencies, you can use the `.margin-#` and `.padding-#` utility classes. A good practice is to set in on your `<section>` elements, for starters. To space out content you can use a special `.space-content` class on your parent div (for example in a `.cell` of your `.grid`). By default, margin/padding top and bottom are set with these utilities. You can also set it explicitly using either `.top` of `.bottom` class tokens. Find or tweak all spacing options in `_space.scss`.
+## Deploying your project
 
-```html
-<section class="padding-32">
-  <div class="container">
-    <h2 class="margin-16 bottom">Grid example</h2>
-  </div>
-</section>
-```
+As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
 
-_Examples are included in the index.astro file_
+- [GitHub Pages](https://pages.github.com/)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
 
-### Using Sizes
+You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-If you need an exception on your font-size for a specific reason you can use size utility classes to accomplish that. Using it is easy. Find or tweak all spacing options in `_size.scss`.
+## Create a custom `README.md`
 
-```html
-<div class="container">
-  <p class="size-20">I'm a bigger font size!</p>
-</div>
-```
+We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
-_Examples are included in the index.astro file_
+The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
-## Using Colors
+Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-You can setup your own color schemes in the `_colors.scss` file. You'll find a SCSS map, which gets printed inside `_root.scss` as custom properties.
+## Submitting your solution
 
-```scss
-$colors: (
-  primary-clr: (
-    100: hsl(262, 90%, 95%),
-    200: hsl(262, 100%, 88%),
-    300: hsl(262, 100%, 78%),
-    400: hsl(268, 82%, 60%),
-    500: hsl(273, 79%, 48%),
-  ),
-  // ...
-);
-```
+Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
 
-## Helping out
+Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
 
-If you find that something isn't working right then I'm also happy to hear it to improve this starter! Let me know by either:
+## Sharing your solution
 
-1. [Filing an issue](https://github.com/markteekman/accessible-astro-starter/issues)
-2. Or sending a [pull request](https://github.com/markteekman/accessible-astro-starter/pulls)
+There are multiple places you can share your solution:
 
-## Thank you!
+1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
+2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
+3. Share your solution on other social channels like LinkedIn.
+4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-A big thank you to the creators of this awesome Astro static site builder and to all using this starter to make the web a bit more accessible for all people around the world :)
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+
+The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+
+## Got feedback for us?
+
+We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+
+This challenge is completely free. Please share it with anyone who will find it useful for practice.
+
+**Have fun building!** 🚀
