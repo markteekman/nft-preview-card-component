@@ -15,7 +15,7 @@ let subtitle = 'NFT Preview Card Component'
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- global css -->
     <link rel="stylesheet" href={Astro.resolve('../styles/globals.scss')} />
@@ -43,7 +43,7 @@ let subtitle = 'NFT Preview Card Component'
     <footer>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="https://markteekman.nl">Mark Teekman</a>.
       </div>
     </footer>
 
@@ -51,31 +51,37 @@ let subtitle = 'NFT Preview Card Component'
 </html>
 
 <style lang="scss">
+  html,
   body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background);
     
     main {
       display: grid;
       place-items: center;
-      height: 100vh;
+      flex: 1 0 auto;
+      // padding-top: 5rem;
     }
 
     footer {
-      width: 100%;
       display: flex;
       justify-content: center;
-      position: fixed;
-      right: 0;
-      bottom: 1rem;
-      left: 0;
+      width: 100%;
+      flex-shrink: 0;
+      margin-bottom: 1rem;
+      // position: fixed;
+      // right: 0;
+      // bottom: 1rem;
+      // left: 0;
 
       .attribution { 
-        font-size: 11px; 
+        font-size: 0.85rem; 
         text-align: center; 
-
-        a {
-          color: hsl(228, 45%, 44%); 
-        }
       }
     }
   }
