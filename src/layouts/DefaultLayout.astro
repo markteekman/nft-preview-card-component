@@ -1,9 +1,6 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-
 const {title} = Astro.props
-let subtitle = 'Accessible Astro Starter'
+let subtitle = 'NFT Preview Card Component'
 ---
 
 <html lang="en" dir="ltr">
@@ -13,7 +10,7 @@ let subtitle = 'Accessible Astro Starter'
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,9 +32,6 @@ let subtitle = 'Accessible Astro Starter'
   </head>
   <body>
 
-    <!-- header -->
-    <Header />
-
     <!-- main -->
     <main id="main-content">
 
@@ -46,29 +40,43 @@ let subtitle = 'Accessible Astro Starter'
     </main>
 
     <!-- footer -->
-    <Footer />
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
 
   </body>
 </html>
 
 <style lang="scss">
-  // sticky footer on low content pages
-  html,
   body {
-    height: 100%;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
     background-color: var(--background);
-
+    
     main {
-      flex: 1 0 auto;
+      display: grid;
+      place-items: center;
+      height: 100vh;
     }
 
     footer {
-      flex-shrink: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      right: 0;
+      bottom: 1rem;
+      left: 0;
+
+      .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+
+        a {
+          color: hsl(228, 45%, 44%); 
+        }
+      }
     }
   }
 </style>
